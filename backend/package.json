@@ -7,7 +7,8 @@
         "dev": "ts-node-dev -r tsconfig-paths/register --poll  --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
         "start": "ts-node src/index.ts",
         "prisma:migrate": "prisma migrate dev",
-        "prisma:studio": "prisma studio"
+        "prisma:studio": "prisma studio",
+        "prisma:seed": "ts-node prisma/seed.ts"
     },
     "keywords": [],
     "author": "",
@@ -23,7 +24,8 @@
         "pg": "^8.4.0",
         "reflect-metadata": "^0.1.13",
         "swagger-ui-express": "^4.5.0",
-        "tsyringe": "^4.7.0"
+        "tsyringe": "^4.7.0",
+        "uuid": "^9.0.0"
     },
     "devDependencies": {
         "@types/bcrypt": "^5.0.0",
@@ -31,6 +33,7 @@
         "@types/jest": "^29.0.3",
         "@types/jsonwebtoken": "^8.5.9",
         "@types/node": "^16.11.10",
+        "@types/uuid": "^8.3.4",
         "@typescript-eslint/eslint-plugin": "^5.0.0",
         "@typescript-eslint/parser": "^5.38.1",
         "eslint": "^8.0.1",
