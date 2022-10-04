@@ -5,23 +5,23 @@
         "rootDir": "./",
         "outDir": "./dist",
         "baseUrl": "./src",
-        // "paths": {
-        //     "@modules/*": [
-        //         "modules/*"
-        //     ],
-        //     "@config/*": [
-        //         "config/*"
-        //     ],
-        //     "@shared/*": [
-        //         "shared/*"
-        //     ],
-        //     "@utils/*": [
-        //         "utils/*"
-        //     ],
-        //     "@errors/*": [
-        //         "shared/errors/*"
-        //     ]
-        // },
+        "paths": {
+            "@modules/*": [
+                "modules/*"
+            ],
+            "@config/*": [
+                "config/*"
+            ],
+            "@shared/*": [
+                "shared/*"
+            ],
+            "@utils/*": [
+                "utils/*"
+            ],
+            "@errors/*": [
+                "shared/errors/*"
+            ]
+        },
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "resolveJsonModule": true,
