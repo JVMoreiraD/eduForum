@@ -1,0 +1,98 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "educationManagement Documentation",
+        "description": "Documentação do teste teórico",
+        "version": "1.0.0",
+        "contact": {
+            "email": "jvitormoreirad@hotmail.com"
+        }
+    },
+    "paths": {
+        "/auth/singIn": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Faz autenticação do usuário",
+                "description": "Recebe o email e senha para efetuar o login",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#definitions/requestAuth"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#definitions/responseAuth"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Erro ao efetuar login",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "message": "Email ou senha incorretos"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "requestAuth": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "email": "jvitormoreirad@hotmail.com",
+                "password": "*******"
+            }
+        },
+        "responseAuth": {
+            "type": "object",
+            "properties": {
+                "token": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "token": "XXXXXXXXX"
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    }
+}
