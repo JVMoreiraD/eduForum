@@ -5,8 +5,8 @@ import express, { NextFunction, Request, Response } from "express";
 import SwaggerUI from "swagger-ui-express";
 
 import swaggerFile from "../../../swagger.json";
-import { AppError } from "../../errors/AppError";
 import { router } from "./routes";
+import { AppError } from "@shared/errors/AppError";
 
 const app = express();
 
