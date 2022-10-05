@@ -4,7 +4,6 @@ import './App.css'
 import SignIn from './pages/Auth/SignIn'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <SignIn></SignIn>
